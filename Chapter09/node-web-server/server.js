@@ -5,6 +5,16 @@ const port = process.env.PORT || 3000;
 
 var app = express();
 
+// Set up rate limiter: maximum of 100 requests per 15 minutes
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+});
+
+// Apply the rate limiter to all requests
+app.use(limiter);
+
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 
