@@ -1,8 +1,18 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const rateLimit = require('express-rate-limit');
 
 var app = express();
+
+// Set up rate limiter: max 100 requests per 15 minutes per IP
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100                 // limit each IP to 100 requests per windowMs
+});
+
+// Apply rate limiter to all requests
+app.use(limiter);
 
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
