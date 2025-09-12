@@ -1,10 +1,9 @@
-const yargs = require('yargs');
+import { options } from 'yargs';
 
-const geocode = require('./geocode/geocode');
-const weather = require('./weather/weather');
+import { geocodeAddress } from './geocode/geocode';
+import { getWeather } from './weather/weather';
 
-const argv = yargs
-  .options({
+const argv = options({
     a: {
       demand: true,
       alias: 'address',
@@ -16,12 +15,12 @@ const argv = yargs
   .alias('help', 'h')
   .argv;
 
-geocode.geocodeAddress(argv.address, (errorMessage, results) => {
+geocodeAddress(argv.address, (errorMessage, results) => {
   if (errorMessage) {
     console.log(errorMessage);
   } else {
     console.log(results.address);
-    weather.getWeather(results.latitude, results.longitude, (errorMessage, weatherResults) => {
+    getWeather(results.latitude, results.longitude, (errorMessage, weatherResults) => {
       if (errorMessage) {
         console.log(errorMessage);
       } else {

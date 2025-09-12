@@ -1,4 +1,4 @@
-const request = require('request');
+import request from 'request';
 
 var getWeather = (lat, lng, callback) => {
   request({
@@ -18,4 +18,5 @@ var getWeather = (lat, lng, callback) => {
   });
 };
 
-module.exports.getWeather = getWeather;
+const _getWeather = getWeather;
+export { _getWeather as getWeather };

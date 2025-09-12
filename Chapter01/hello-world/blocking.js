@@ -1,4 +1,4 @@
-var getUserSync = require('getUserSync');
+import getUserSync from 'getUserSync';
 
 console.log('starting user1');
 var user1 = getUserSync('123');

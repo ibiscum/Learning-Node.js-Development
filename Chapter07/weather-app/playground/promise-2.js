@@ -1,4 +1,4 @@
-const request = require('request');
+import request from 'request';
 
 var geocodeAddress = (address) => {
   return new Promise((resolve, reject) => {
