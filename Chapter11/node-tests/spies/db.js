@@ -1,3 +1,4 @@
 module.exports.saveUser = (user) => {
-  console.log('Saving the user', user);
+  // Do not log sensitive data like password.
+  console.log('Saving the user', {email: user.email});
 }
