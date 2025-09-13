@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "feels": "^2.0.0",
-    "request": "^2.83.0",
-    "yargs": "^10.1.1"
+    "feels": "^3.0.0",
+    "request": "^2.88.2",
+    "yargs": "^18.0.0"
   }
 }
