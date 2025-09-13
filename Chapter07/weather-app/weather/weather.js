@@ -18,5 +18,4 @@ var getWeather = (lat, lng, callback) => {
   });
 };
 
-const _getWeather = getWeather;
-export { _getWeather as getWeather };
+export { getWeather };
