@@ -1,10 +1,10 @@
 console.log('Starting notes.js');
 
-module.exports.addNote = () => {
+export function addNote() {
   console.log('addNote');
   return 'New note';
-};
+}
 
-module.exports.add = (a, b) => {
+export function add(a, b) {
   return a + b;
-};
+}

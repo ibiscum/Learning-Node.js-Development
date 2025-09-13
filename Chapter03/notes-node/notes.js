@@ -1,9 +1,9 @@
 console.log('Starting notes.js');
-const fs = require('fs');
+import { readFileSync, writeFileSync } from 'fs';
 
 var fetchNotes = () => {
   try{
-    var notesString = fs.readFileSync('notes-data.json');
+    var notesString = readFileSync('notes-data.json');
     return JSON.parse(notesString);
   } catch(e) {
     return[];
@@ -11,10 +11,10 @@ var fetchNotes = () => {
 };
 
 var saveNotes = (notes) =>{
-  fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+  writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 
-var addNote = (title,body) => {
+export var addNote = (title, body) => {
   var notes = fetchNotes();
   var note = {
     title,
@@ -28,22 +28,14 @@ var addNote = (title,body) => {
   }
 };
 
-var getAll = () => {
+export var getAll = () => {
   console.log('Getting all notes');
 };
 
-var getNote = (title) => {
+export var getNote = (title) => {
   console.log('Getting note', title);
 };
 
-var removeNote = (title) => {
+export var removeNote = (title) => {
   console.log('Removing note', title);
-};
-
-
-module.exports = {
-  addNote,
-  getAll,
-  getNote,
-  removeNote
 };

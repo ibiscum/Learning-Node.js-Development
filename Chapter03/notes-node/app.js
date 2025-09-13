@@ -1,18 +1,19 @@
 console.log('Starting app.js');
 
-const fs = require('fs');
+import fs from 'fs';
 
-const notes = require('./notes.js');
-const _ = require('lodash');
-const yargs = require('yargs');
+import { getNote, addNote, getAll, removeNote } from './notes.js';
+import _ from 'lodash';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+const argv = yargs(hideBin(process.argv)).parse()
 
-const argv = yargs.argv;
 var command = argv._[0];
 console.log('Command: ', command);
 console.log('Yargs', argv);
 
 if (command === 'add') {
-  var note = notes.addNote(argv.title, argv.body);
+  var note = addNote(argv.title, argv.body);
   if (note){
     console.log('Note created');
     console.log('--');
@@ -22,11 +23,11 @@ if (command === 'add') {
     console.log('Note title taken');
   }
 } else if (command === 'list') {
-  notes.getAll();
+  getAll();
 } else if (command === 'read') {
-  notes.getNote(argv.title);
+  getNote(argv.title);
 } else if (command === 'remove') {
-  notes.removeNote(argv.title);
+  removeNote(argv.title);
 } else {
   console.log('Command not recognized');
 }

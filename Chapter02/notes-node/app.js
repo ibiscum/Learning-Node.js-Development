@@ -1,9 +1,9 @@
 console.log('Starting app.js');
 
-const fs = require('fs');
+import fs from 'fs';
 
-const notes = require('./notes.js');
-const _ = require('lodash');
+import {add} from './notes.js';
+import _ from 'lodash';
 
 var command = process.argv[2];
 console.log('Command: ', command);

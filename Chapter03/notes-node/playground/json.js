@@ -10,7 +10,7 @@
 // console.log(typeof person);
 // console.log(person);
 
-const fs = require('fs');
+import { writeFileSync, readFileSync } from 'fs';
 
 var originalNote = {
   title: 'Some title',
@@ -18,9 +18,9 @@ var originalNote = {
 };
 
 var originalNoteString = JSON.stringify(originalNote);
-fs.writeFileSync('notes.json', originalNoteString);
+writeFileSync('notes.json', originalNoteString);
 
-var noteString = fs.readFileSync('notes.json');
+var noteString = readFileSync('notes.json');
 var note = JSON.parse(noteString);
 // note
 console.log(typeof note);
