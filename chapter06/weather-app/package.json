@@ -1,0 +1,19 @@
+{
+  "name": "ch06-weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dropin-request": "^1.1.1",
+    "feels": "^3.0.0",
+    "request": "^2.88.2",
+    "yargs": "^18.0.0"
+  }
+}

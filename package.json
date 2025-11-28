@@ -1,0 +1,21 @@
+{
+  "name": "learning-node.js-development",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "Chapter02/notes-node",
+    "Chapter03/notes-node",
+    "Chapter04/notes-node",
+    "Chapter05/weather-app",
+    "Chapter06/weather-app"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
