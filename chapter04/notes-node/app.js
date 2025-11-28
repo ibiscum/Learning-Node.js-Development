@@ -1,10 +1,16 @@
-import fs from 'fs';
+// import fs from 'fs';
 
-import { addNote, logNote, getAll, getNote, removeNote } from './notes.js';
-import _ from 'lodash';
+import { 
+  addNote,
+  logNote, 
+  // getAll,
+  // getNote,
+  // removeNote 
+} from './notes.js';
+// import _ from 'lodash';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import { title } from 'process';
+// import { title } from 'process';
 
 const titleOptions = {
   describe: 'Title of note',
@@ -12,11 +18,11 @@ const titleOptions = {
   alias: 't'
 };
 
-const bodyOptions = {
-  describe: 'Body of note',
-  demand: true,
-  alias: 'b'
-};
+// const bodyOptions = {
+//   describe: 'Body of note',
+//   demand: true,
+//   alias: 'b'
+// };
 
 yargs()
   .scriptName("app")
@@ -58,15 +64,16 @@ yargs()
 //   .argv;
 // var command = argv._[0];
 
-if (yargs.command === 'add') {
-  var note = addNote(argv.title, argv.body);
-  if (note){
-    console.log('Note created');
-    logNote(note);
-  } else {
-    console.log('Note title taken');
-  }
-} 
+// if (yargs.command === 'add') {
+//   var note = addNote(argv.title, argv.body);
+//   if (note){
+//     console.log('Note created');
+//     logNote(note);
+//   } else {
+//     console.log('Note title taken');
+//   }
+// } 
+
 // else if (command === 'list') {
 //   var allNotes = getAll();
 //   console.log(`Printing ${allNotes.length} note(s).`);

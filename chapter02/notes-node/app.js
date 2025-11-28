@@ -1,9 +1,8 @@
 console.log('Starting app.js');
 
-import fs from 'fs';
-
-import {add} from './notes.js';
-import _ from 'lodash';
+// import fs from 'fs';
+// import {add} from './notes.js';
+// import _ from 'lodash';
 
 var command = process.argv[2];
 console.log('Command: ', command);

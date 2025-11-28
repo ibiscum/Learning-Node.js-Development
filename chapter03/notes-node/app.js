@@ -1,9 +1,9 @@
 console.log('Starting app.js');
 
-import fs from 'fs';
+// import fs from 'fs';
 
 import { getNote, addNote, getAll, removeNote } from './notes.js';
-import _ from 'lodash';
+// import _ from 'lodash';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 const argv = yargs(hideBin(process.argv)).parse()

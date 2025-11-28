@@ -1,8 +1,8 @@
 import express from 'express';
 import pkg from 'hbs';
 const { registerPartials, registerHelper } = pkg;
-import { appendFile } from 'fs';
-import rateLimit from 'express-rate-limit';
+// import { appendFile } from 'fs';
+// import rateLimit from 'express-rate-limit';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -13,10 +13,10 @@ const __dirname = dirname(__filename);
 var app = express();
 
 // Set up rate limiter: max 100 requests per 15 minutes per IP
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100                 // limit each IP to 100 requests per windowMs
-});
+// const limiter = rateLimit({
+//   windowMs: 15 * 60 * 1000, // 15 minutes
+//   max: 100                 // limit each IP to 100 requests per windowMs
+// });
 
 // Apply rate limiter to all requests
 //app.use(limiter);

@@ -1,7 +1,7 @@
 var user = {
   name: 'Andrew',
   sayHi: () => {
-    console.log(arguments);
+    // console.log(arguments);
     console.log(`Hi. I'm ${this.name}`);
   },
   sayHiAlt() {

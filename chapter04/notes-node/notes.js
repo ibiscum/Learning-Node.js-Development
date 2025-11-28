@@ -4,7 +4,9 @@ var fetchNotes = () => {
   try{
     var notesString = readFileSync('notes-data.json');
     return JSON.parse(notesString);
-  } catch(e) {
+  } 
+  catch(error) {
+    console.log(error.message);
     return[];
   }
 };
@@ -46,7 +48,7 @@ export var removeNote = (title) => {
 };
 
 export var logNote = (note) => {
-  debugger;
+  // debugger;
   console.log('--');
   console.log(`Title: ${note.title}`);
   console.log(`Body: ${note.body}`);

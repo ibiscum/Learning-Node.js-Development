@@ -1,21 +1,25 @@
 {
   "name": "learning-node.js-development",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "private": true,
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix"
   },
   "workspaces": [
-    "Chapter02/notes-node",
-    "Chapter03/notes-node",
-    "Chapter04/notes-node",
-    "Chapter05/weather-app",
-    "Chapter06/weather-app"
+    "chapter02/notes-node",
+    "chapter03/notes-node",
+    "chapter04/notes-node",
+    "chapter05/weather-app",
+    "chapter06/weather-app"
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0"
   }
 }

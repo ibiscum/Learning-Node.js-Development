@@ -5,7 +5,9 @@ var fetchNotes = () => {
   try{
     var notesString = readFileSync('notes-data.json');
     return JSON.parse(notesString);
-  } catch(e) {
+  } 
+  catch(error) {
+    console.log(error.message);
     return[];
   }
 };
