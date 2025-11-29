@@ -1,5 +1,5 @@
 {
-  "name": "ch06-weather-app",
+  "name": "@chapter06/weather-app",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",

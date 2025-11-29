@@ -1,5 +1,5 @@
 import express from 'express';
-import pkg from 'hbs';
+import * as pkg from 'hbs';
 const { registerPartials, registerHelper } = pkg;
 // import { appendFile } from 'fs';
 // import rateLimit from 'express-rate-limit';
