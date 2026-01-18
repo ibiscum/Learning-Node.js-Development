@@ -14,7 +14,7 @@ console.log('Yargs', argv);
 
 if (command === 'add') {
   var note = addNote(argv.title, argv.body);
-  if (note){
+  if (note) {
     console.log('Note created');
     console.log('--');
     console.log(`Title: ${note.title}`);

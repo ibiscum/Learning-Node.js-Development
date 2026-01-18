@@ -8,18 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix"
   },
-  "workspaces": [
-    "chapter02/notes-node",
-    "chapter03/notes-node",
-    "chapter04/notes-node",
-    "chapter05/weather-app",
-    "chapter06/weather-app",
-    "chapter07/weather-app",
-    "chapter08/node-web-server",
-    "chapter09/node-web-server",
-    "chapter10/node-tests",
-    "chapter11/node-tests"
-  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

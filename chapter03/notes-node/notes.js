@@ -3,8 +3,12 @@ import { readFileSync, writeFileSync } from 'fs';
 
 var fetchNotes = () => {
   try{
-    var notesString = readFileSync('notes-data.json');
-    return JSON.parse(notesString);
+    let notesString = readFileSync('./notes-data.json');
+    let notesStringParsed = JSON.parse(notesString);
+    console.log("fetchNotes:", notesStringParsed);
+
+    return notesStringParsed;
+
   } 
   catch(error) {
     console.log(error.message);
@@ -18,6 +22,8 @@ var saveNotes = (notes) =>{
 
 export var addNote = (title, body) => {
   var notes = fetchNotes();
+  console.log("addNotes:", notes);
+
   var note = {
     title,
     body
