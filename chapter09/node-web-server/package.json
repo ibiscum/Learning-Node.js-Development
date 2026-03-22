@@ -11,7 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1",
+<<<<<<< HEAD
     "hbs": "^4.2.0",
     "express-rate-limit": "^8.2.2"
+=======
+    "express-rate-limit": "^8.3.1",
+    "hbs": "^4.2.0"
+>>>>>>> 5d1544b (update)
   }
 }
