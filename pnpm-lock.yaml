@@ -80,6 +80,9 @@ importers:
       request:
         specifier: ^2.88.2
         version: 2.88.2
+      underscore:
+        specifier: '>=1.13.8'
+        version: 1.13.8
       yargs:
         specifier: ^18.0.0
         version: 18.0.0
@@ -1364,6 +1367,9 @@ packages:
     resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
     engines: {node: '>=0.8.0'}
     hasBin: true
+
+  underscore@1.13.8:
+    resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
 
   underscore@1.4.4:
     resolution: {integrity: sha512-ZqGrAgaqqZM7LGRzNjLnw5elevWb5M8LEoDMadxIW3OWbcv72wMMgKdwOKpd5Fqxe8choLD8HN3iSj3TUh/giQ==}
@@ -2780,6 +2786,8 @@ snapshots:
 
   uglify-js@3.19.3:
     optional: true
+
+  underscore@1.13.8: {}
 
   underscore@1.4.4: {}
 

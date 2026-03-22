@@ -15,7 +15,8 @@
     "feels": "^3.0.0",
     "geocode": "^0.0.3",
     "request": "^2.88.2",
-    "yargs": "^18.0.0"
+    "yargs": "^18.0.0",
+    "underscore": ">=1.13.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
